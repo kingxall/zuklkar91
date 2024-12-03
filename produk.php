@@ -9,8 +9,14 @@
     <?php require "navbar.php" ?>
 <!--banner-->
     <div class="comtainer-fluid banner-produk">
-    </div class="container"></div>
+    <div class="container">
+        <h1>Produk</h1>>
 </div>
+</div>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="fontawesome/js/all.min.js"></script>
+
 
 </body>
 </html>
