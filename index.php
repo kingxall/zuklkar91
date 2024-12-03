@@ -86,12 +86,12 @@
                             <!--awalan-->
                             <div class="col-sm-6 col-md-4 mb-4">
                             <div class="card" >
-                                <img src="image/kopi1.jpeg" class="card-img-top" alt="...">
+                                <img src="image/<?php echo whatever; ?>" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text text-truncate">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                   <p class="card-text text-harga"> Rp.15.000</p>
-                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <h4 class="card-title"><?php echo $data['nama']; ?></h4>
+                                    <p class="card-text text-truncate"><?php echo $data['detail']; ?></p>
+                                    <p class="card-text text-harga"> Rp <?php echo $data['harga']</p>
+                                    <a href="produk-detail.php?nama=$data['nama']" class="btn warna2 text-white">Lihat detail</a>
                                 </div>
                                 </div>
                             </div>
