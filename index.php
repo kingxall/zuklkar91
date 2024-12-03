@@ -85,13 +85,15 @@
                         <?php while($data = mysqli_fetch_array($queryproduk)) { ?>
                             <!--awalan-->
                             <div class="col-sm-6 col-md-4 mb-4">
-                            <div class="card" >
-                                <img src="image/<?php echo whatever; ?>" class="card-img-top" alt="...">
+                            <div class="card h-100" >
+                                <div class="image-box">
+                                <img src="image/<?php echo $data['foto']; ?>" class="card-img-top" alt="...">
+                                </div>
                                 <div class="card-body">
                                     <h4 class="card-title"><?php echo $data['nama']; ?></h4>
                                     <p class="card-text text-truncate"><?php echo $data['detail']; ?></p>
-                                    <p class="card-text text-harga"> Rp <?php echo $data['harga']</p>
-                                    <a href="produk-detail.php?nama=$data['nama']" class="btn warna2 text-white">Lihat detail</a>
+                                    <p class="card-text text-harga"> Rp <?php echo $data['harga']; ?></p>
+                                    <a href="produk-detail.php?nama=<?php echo $data['nama'];?>" class="btn warna2 text-white">Lihat detail</a>
                                 </div>
                                 </div>
                             </div>
@@ -100,6 +102,10 @@
                     </div>
                 </div>
                     
+                            
+
+
+
                 <script src="bootsrap/js/bootstrap.bundle.min.js"></script>
                 <script src="fontawesome/js/all.min.js"></script>
                 </body>
