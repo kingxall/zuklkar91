@@ -4,7 +4,7 @@
 
         //nama produk
         if(isset($_GET['keyword'])){
-            $queryproduk = mysqli_query($con,"SELECT * FROM produk WHERE nama LIKE '%$_GET [keyword]%'");
+            $queryproduk = mysqli_query($con,"SELECT * FROM produk WHERE nama LIKE '%$_GET [keyword]%' ");
         }
         else if(isset($_GET['kategori'])){
             $queryGETkategoriId = mysqli_query($con,"SELECT * FROM kategori WHERE nama='$_GET[kategori]' ");
