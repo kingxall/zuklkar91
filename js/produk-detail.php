@@ -1,3 +1,10 @@
+<?php
+    require "koneksi.php";
+    $nama= htmlspecialchars($_GET['nama']);
+    $queryProduk = mysqli_query($con, "SELECT * FROM produk WHERE nama='$nama'");
+    $produk = mysqli_fetch_array($queryProduk);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,9 +18,33 @@
 
 </head>
 <body>
+    <?php require "navbar.php"; ?>
+
+    <!-- detail produk -->
+     <div class="container-fluid py-5">
+     <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="image/<?php echo $produk['foto']; ?>" class="w-100" alt="">
+            </div>
+            <div class="col-md-6 offset-md-1">
+                <h1><?php echo $produk['nama']; ?></h1>
+                <p class="fs-5">
+                    <?php echo $produk['detail']; ?>
+                </p>
+                <p class="text-harga">
+                    Rp <?php echo $produk['harga']; ?>
+                </php>
+                <p class="fs-5"> Status Ketersediaan : <strong><?php echo $produk ['ketersediaan-stok']; ?></strong></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="fontawesome"></script>
+</body>
+</html>
 
         
