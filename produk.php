@@ -1,20 +1,20 @@
        <?php
         require "koneksi.php";
-        $querykategori = mysqli_query($con, "SELECT * FROM kategori");
+        $queryKategori = mysqli_query($con, "SELECT * FROM kategori");
 
         //nama produk
         if(isset($_GET['keyword'])){
-            $queryproduk = mysqli_query($con,"SELECT * FROM produk WHERE nama LIKE '%$_GET [keyword]%' ");
+            $queryProduk = mysqli_query($con,"SELECT * FROM produk WHERE nama LIKE '%$_GET [keyword]%' ");
         }
         else if(isset($_GET['kategori'])){
             $queryGETkategoriId = mysqli_query($con,"SELECT * FROM kategori WHERE nama='$_GET[kategori]' ");
             $kategoriId = mysqli_fetch_array($queryGETkategoriId);
 
-            $queryproduk = mysqli_query($con,"SELECT * FROM produk WHERE kategori_id='$kategoriId[id]'");
+            $queryProduk = mysqli_query($con,"SELECT * FROM produk WHERE kategori_id='$kategoriId[id]'");
         
         }
         else{
-            $queryproduk = mysqli_query($con,"SELECT * FROM produk");
+            $queryProduk = mysqli_query($con,"SELECT * FROM produk");
         
         }
 
@@ -44,7 +44,7 @@
                 <div class="col-lg-3 mb-5">
                     <h3>Kategori</h3>
                 <ul class="list-group">
-                    <?php while ($kategori = mysqli_fetch_array($querykategori)) {?>
+                    <?php while ($kategori = mysqli_fetch_array($queryKategori)) {?>
                         <a href="produk.php?ketegori=<?php echo $kategori['nama'] ?>">
                         <li class="list-group-item"><?php echo $kategori['nama']; ?> </li>
                         </a>
@@ -54,7 +54,7 @@
                 <div class="col-lg-9 ">
                     <h3 class="text-center mb-3">Produk</h3>
                     <div class="row">
-                    <?php while($produk = mysqli_fetch_array($queryproduk)) { ?>
+                    <?php while($produk = mysqli_fetch_array($queryProduk)) { ?>
                         <div class="col-md-4 mb-4">
                         <div class="card h-100" >
                                 <div class="image-box">

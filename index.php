@@ -1,7 +1,7 @@
             <?php 
             
             require "koneksi.php";
-            $queryproduk = mysqli_query($con, "SELECT id,nama,harga,foto,detail FROM produk LIMIT 6");
+            $queryproduk = mysqli_query($con, "SELECT id,nama,harga,foto,detail FROM produk LIMIT 3");
 
             ?>     
               
