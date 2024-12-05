@@ -74,7 +74,7 @@
                 </div>
             </div>
 
-
+            <?php require "footer.php"; ?> 
             <script src="bootsrap/js/bootstrap.bundle.min.js"></script>
             <script src="fontawesome/js/all.min.js"></script>
             </body>

@@ -14,11 +14,11 @@
         <title>Toko online | Detail produk</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <?php require "navbar.php"; ?>
+<?php require "navbar.php" ?>
 
     <!-- detail produk -->
      <div class="container-fluid py-5">
@@ -34,6 +34,7 @@
                 </p>
                 <p class="text-harga">
                     Rp <?php echo $produk['harga']; ?>
+                </p>
                 </php>
                 <p class="fs-5"> Status Ketersediaan : <strong><?php echo $produk ['ketersediaan-stok']; ?></strong></p>
             </div>
@@ -43,7 +44,7 @@
 
 
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="fontawesome"></script>
+    <script src="fontawesome/js/all.min.js"></script>
 </body>
 </html>
 
