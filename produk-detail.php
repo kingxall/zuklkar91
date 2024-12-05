@@ -64,7 +64,7 @@ $queryprodukterkait = mysqli_query($con, "SELECT * FROM produk WHERE kategori_id
                         </div>
                     <?php } ?>
                 <?php } else { ?>
-                    <p class="text-white text-center">Tidak ada produk terkait ditemukan.</p>
+                    <h4 class=" text-center text-white">Tidak ada produk terkait ditemukan.</h4>
                 <?php } ?>
             </div>
         </div>
