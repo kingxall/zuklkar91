@@ -19,9 +19,24 @@
         <title>Home</title>
         <link rel="stylesheet" href="../bootsrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../fontawesome/css/fontawesome.min.css">
+       
     </head>
 
     <style>
+        power-bi {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f9f9f9;
+        }
+        iframe {
+            border: none;
+            width: 90%; /* Sesuaikan dengan kebutuhan */
+            height: 90vh; /* Tinggi layar penuh */
+        }
         .kotak{
             border:solid;
         }
@@ -83,7 +98,11 @@
                         </div>
                         </div>
                     </div>
-
+                <div class="power-bi">
+                <iframe title="semester3" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiN2ViMmRkMzItNDk1NC00ZWQ0LTg4MjItNGY4OTdlNDZlMWM2IiwidCI6IjUyNjNjYzgxLTU5MTItNDJjNC1hYmMxLWQwZjFiNjY4YjUzMCIsImMiOjEwfQ%3D%3D" 
+                    frameborder="0" allowFullScreen="true">
+                </iframe>
+                </div>
                 </div>
             </div>
 
